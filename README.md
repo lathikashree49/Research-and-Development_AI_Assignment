@@ -1,4 +1,4 @@
-# R-D_AI_Assignment
+# R and D_AI_Assignment
 
 Research and Development / AI Assignment  
 Parameter Estimation of a Parametric Curve  
