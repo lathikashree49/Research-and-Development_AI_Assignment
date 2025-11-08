@@ -1,15 +1,9 @@
 # R and D_AI_Assignment
-
-Research and Development / AI Assignment  
 Parameter Estimation of a Parametric Curve  
-
 The goal of this project was to estimate the unknown parameters θ, M, and X in a specific parametric curve equation. The curve is defined as  
-
 x = t cos(θ) − e^M |t| sin(0.3t) sin(θ) + X,  
 y = 42 + t sin(θ) + e^M |t| sin(0.3t) cos(θ)  
-
 where t lies between 6 and 60. The parameters are limited to the ranges 0° < θ < 50°, −0.05 < M < 0.05, and 0 < X < 100.  
-
 The provided dataset included only the x and y coordinates of the curve. Since the t values were missing, they were reconstructed as evenly spaced values between 6 and 60, assuming the points were sampled uniformly along the curve. The mathematical model was built in Python using NumPy and SciPy libraries. We performed optimization by minimizing the L1 loss function, which measures the total absolute difference between the observed and predicted values. The optimization used the L-BFGS-B algorithm, which effectively applies parameter constraints. We created visualizations using Matplotlib to check that the predicted curve closely matched the provided data points.  
 
 After running the optimization, the estimated parameters were θ = 28.119469°, M = 0.021383, and X = 54.899953. These values fit comfortably within the specified ranges. The model reached a total L₁ distance of 37,865.0955 and an average L₁ error per sample of 25.2434. This indicates a strong fit between the model and the observed data. The final parametric equation of the curve can be expressed as  
